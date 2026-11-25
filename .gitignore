@@ -1,0 +1,12 @@
+node_modules/
+dist/
+*.streamDeckPlugin
+*.streamDeckProfile
+io.github.tufacker.ableton-control.sdPlugin/bin/*
+!io.github.tufacker.ableton-control.sdPlugin/bin/.gitkeep
+__pycache__/
+.DS_Store
+
+# Private: old release zips, notes and history
+archive/
+CLAUDE_HANDOFF.md

@@ -1,0 +1,153 @@
+{
+  "$schema": "https://schemas.elgato.com/streamdeck/plugins/manifest.json",
+  "Name": "Ableton Control",
+  "Version": "1.0.0.0",
+  "Author": "tufacker",
+  "Description": "Bidirectional track, mixer, and Arrangement zoom controls for Ableton Live on Stream Deck +.",
+  "URL": "https://github.com/tufacker/streamdeck-ableton",
+  "UUID": "io.github.tufacker.ableton-control",
+  "Category": "Ableton Control",
+  "CategoryIcon": "imgs/plugin/category-icon",
+  "Icon": "imgs/plugin/marketplace",
+  "CodePath": "bin/plugin.js",
+  "SDKVersion": 2,
+  "Software": { "MinimumVersion": "6.6" },
+  "Nodejs": { "Version": "20" },
+  "OS": [{ "Platform": "mac", "MinimumVersion": "12" }],
+  "ApplicationsToMonitor": { "mac": ["com.ableton.live"] },
+  "Profiles": [
+    {
+      "Name": "ableton-control",
+      "DeviceType": 7,
+      "Readonly": false,
+      "DontAutoSwitchWhenInstalled": false,
+      "AutoInstall": true
+    }
+  ],
+  "Actions": [
+    {
+      "Name": "Selected Track",
+      "UUID": "io.github.tufacker.ableton-control.track",
+      "Icon": "imgs/actions/action",
+      "Tooltip": "Select the previous or next Ableton track.",
+      "Controllers": ["Encoder"],
+      "States": [{ "Image": "imgs/actions/action" }],
+      "Encoder": {
+        "layout": "layouts/dial.json",
+        "StackColor": "#8f48ff",
+        "TriggerDescription": { "Rotate": "Select track", "Push": "Open/close device editor" }
+      }
+    },
+    {
+      "Name": "Selected Track Volume",
+      "UUID": "io.github.tufacker.ableton-control.volume",
+      "Icon": "imgs/actions/action",
+      "Tooltip": "Adjust the selected Ableton track volume.",
+      "Controllers": ["Encoder"],
+      "States": [{ "Image": "imgs/actions/action" }],
+      "Encoder": {
+        "layout": "layouts/dial.json",
+        "StackColor": "#32c786",
+        "TriggerDescription": { "Rotate": "Adjust volume/pan; hold push for fine adjust", "Push": "Toggle volume/pan" }
+      }
+    },
+    {
+      "Name": "Horizontal Arrangement Zoom",
+      "UUID": "io.github.tufacker.ableton-control.horizontal-zoom",
+      "Icon": "imgs/actions/action",
+      "Tooltip": "Zoom the Arrangement timeline horizontally.",
+      "Controllers": ["Encoder"],
+      "States": [{ "Image": "imgs/actions/action" }],
+      "Encoder": {
+        "layout": "layouts/dial.json",
+        "StackColor": "#43a5ff",
+        "TriggerDescription": { "Rotate": "Horizontal zoom", "Push": "Arrangement/Session" }
+      }
+    },
+    {
+      "Name": "Vertical Arrangement Zoom",
+      "UUID": "io.github.tufacker.ableton-control.vertical-zoom",
+      "Icon": "imgs/actions/action",
+      "Tooltip": "Change Arrangement track height.",
+      "Controllers": ["Encoder"],
+      "States": [{ "Image": "imgs/actions/action" }],
+      "Encoder": {
+        "layout": "layouts/dial.json",
+        "StackColor": "#ff8a34",
+        "TriggerDescription": { "Rotate": "All track heights; hold push for selected track", "Push": "Session unfold" }
+      }
+    },
+    {
+      "Name": "Arm Selected Track",
+      "UUID": "io.github.tufacker.ableton-control.arm",
+      "Icon": "imgs/actions/action",
+      "Tooltip": "Toggle record arm on the selected track.",
+      "Controllers": ["Keypad"],
+      "States": [{ "Image": "imgs/actions/action", "ShowTitle": false }]
+    },
+    {
+      "Name": "Solo Selected Track",
+      "UUID": "io.github.tufacker.ableton-control.solo",
+      "Icon": "imgs/actions/action",
+      "Tooltip": "Toggle solo on the selected track.",
+      "Controllers": ["Keypad"],
+      "States": [{ "Image": "imgs/actions/action", "ShowTitle": false }]
+    },
+    {
+      "Name": "Mute Selected Track",
+      "UUID": "io.github.tufacker.ableton-control.mute",
+      "Icon": "imgs/actions/action",
+      "Tooltip": "Toggle mute on the selected track.",
+      "Controllers": ["Keypad"],
+      "States": [{ "Image": "imgs/actions/action", "ShowTitle": false }]
+    },
+    {
+      "Name": "Monitor Selected Track",
+      "UUID": "io.github.tufacker.ableton-control.monitor",
+      "Icon": "imgs/actions/action",
+      "Tooltip": "Cycle the selected track monitor mode through In, Auto, and Off.",
+      "Controllers": ["Keypad"],
+      "States": [{ "Image": "imgs/actions/action", "ShowTitle": false }]
+    },
+    {
+      "Name": "Arm Mode",
+      "UUID": "io.github.tufacker.ableton-control.arm-mode",
+      "Icon": "imgs/actions/action",
+      "Tooltip": "Toggle between single-arm selected track and multi-arm latch mode.",
+      "Controllers": ["Keypad"],
+      "States": [{ "Image": "imgs/actions/action", "ShowTitle": false }]
+    },
+    {
+      "Name": "Play",
+      "UUID": "io.github.tufacker.ableton-control.play",
+      "Icon": "imgs/actions/action",
+      "Tooltip": "Start Ableton Live playback.",
+      "Controllers": ["Keypad"],
+      "States": [{ "Image": "imgs/actions/action", "ShowTitle": false }]
+    },
+    {
+      "Name": "Stop",
+      "UUID": "io.github.tufacker.ableton-control.stop",
+      "Icon": "imgs/actions/action",
+      "Tooltip": "Stop Ableton Live playback.",
+      "Controllers": ["Keypad"],
+      "States": [{ "Image": "imgs/actions/action", "ShowTitle": false }]
+    },
+    {
+      "Name": "Arrangement Record",
+      "UUID": "io.github.tufacker.ableton-control.record",
+      "Icon": "imgs/actions/action",
+      "Tooltip": "Toggle Ableton Live's global Arrangement Record switch.",
+      "Controllers": ["Keypad"],
+      "States": [{ "Image": "imgs/actions/action", "ShowTitle": false }]
+    },
+    {
+      "Name": "Click",
+      "UUID": "io.github.tufacker.ableton-control.click",
+      "Icon": "imgs/actions/action",
+      "Tooltip": "Toggle Ableton Live's metronome.",
+      "Controllers": ["Keypad"],
+      "States": [{ "Image": "imgs/actions/action", "ShowTitle": false }]
+    }
+  ]
+}
